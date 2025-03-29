@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Task</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-900 text-white flex items-center justify-center min-h-screen">
+  <div class="w-11/12 md:w-2/3 lg:w-1/2 bg-zinc-800 rounded-xl shadow-lg p-6 md:p-10">
+    
+    <h1 class="text-2xl md:text-3xl font-bold text-center border-b pb-3 border-zinc-600">
+      Edit Task
+    </h1>
+
+    <form action="/update/<%= filename %>" method="POST" class="mt-6">
+      
+      <label class="block text-sm font-semibold text-gray-400">Task Title</label>
+      <input type="text" name="title" value="<%= filename %>" 
+             class="w-full bg-zinc-700 text-gray-300 px-5 py-2 rounded-lg mt-2 cursor-not-allowed"
+             disabled>
+      
+      <label class="block text-sm font-semibold text-gray-400 mt-4">Task Details</label>
+      <textarea name="content"
+                class="w-full bg-zinc-700 text-white px-5 py-2 rounded-lg mt-2 resize-none h-40 focus:ring-2 focus:ring-blue-500">
+        <%= filedata %>
+      </textarea>
+
+      <div class="flex justify-between items-center mt-6">
+        <a href="/" class="bg-gray-600 hover:bg-gray-700 transition px-4 py-2 rounded-lg text-white">
+          Cancel
+        </a>
+        <input type="submit" class="bg-blue-500 hover:bg-blue-600 transition px-4 py-2 rounded-lg text-white cursor-pointer" value="Update Task">
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>

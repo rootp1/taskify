@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practice1</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-900 text-white flex items-center justify-center min-h-screen">
+  <div class="w-11/12 md:w-2/3 lg:w-1/2 bg-zinc-800 rounded-xl shadow-lg p-6 md:p-10">
+    
+    
+    <h1 class="text-2xl md:text-3xl font-bold border-b pb-2 border-zinc-600 text-center">
+      <%= filename %>
+    </h1>
+
+    
+    <pre class="mt-4 bg-zinc-700 p-4 rounded-lg text-sm md:text-base leading-relaxed whitespace-pre-wrap">
+      <%= filedata %>
+    </pre>
+
+    
+    <div class="mt-6 text-center">
+      <a href="/" class="inline-block bg-blue-500 hover:bg-blue-600 transition text-white px-4 py-2 rounded-lg">
+        Back to Home
+      </a>
+    </div>
+  
+  </div>
+</body>
+</html>
